@@ -13,7 +13,34 @@ export function MainPage() {
         <Link to={"/signin"}>Signin</Link>
         </Grid>
         <Grid item>
-        <Link to={"/signup"}>Dash</Link>
+        <Link to={"/signup"}>SignUp</Link>
+        </Grid>
+        <Grid item>
+          <Link to={"/timetable"}>Timetable</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/achievements"}>Achievements</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/exercises"}>Exercises</Link>
+        </Grid>
+        <Grid item>
+          <Link to={"/dishes"}>Dishes</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/friends"}>Friends</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/profile"}>Profile</Link>
+        </Grid>
+        <Grid item>
+          <Link to={"/settings"}>Settings</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/notes"}>Notes</Link>
+        </Grid>
+        <Grid item>
+        <Link to={"/programs"}>Programs</Link>
         </Grid>
       </Grid>
     </>

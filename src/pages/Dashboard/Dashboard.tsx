@@ -224,7 +224,7 @@ export default function Dashboard() {
             sx={{ height: "100%", display: "flex", flexDirection: "column" }}
             component="nav"
           >
-            <Grid container flexGrow={1} xs={12} direction={"column"}>
+            <Grid container flexGrow={1} direction={"column"}>
               <Grid item xs={3} alignItems={"center"}>
                 <ListItems open={open} />
                 <Divider
