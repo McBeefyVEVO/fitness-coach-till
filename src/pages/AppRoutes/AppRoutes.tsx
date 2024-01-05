@@ -7,13 +7,16 @@ import NotFound from "../NotFound/NotFound";
 import Timetable from "../Timetable/Timetable";
 import Achievements from "../Achievements/Achievements";
 import Exercises from "../Exercises/Exercises";
-import Dishes from "../DIshes/Dishes";
+import Dishes from "../Dishes/Dishes";
 import Friends from "../Friends/Friends";
 import Profile from "../Profile/Profile";
 import Settings from "../Settings/Settings";
 import Notes from "../Notes/Notes";
 import Programs from "../Programs/Programs";
 import Notifications from "../Notifications/Notifications";
+import Friend from "../Friends/Friend";
+import Program from "../Programs/Program";
+import Dish from "../Dishes/Dish";
 
 export function AppRoutes() {
     return (
@@ -33,6 +36,10 @@ export function AppRoutes() {
                 <Route path="/notes" element={<Notes />}/>
                 <Route path="/programs" element={<Programs />}/>
                 <Route path="/notifications" element={<Notifications/>}/>
+
+                <Route path="/friend" element={<Friend/>}/>
+                <Route path="/program" element={<Program/>}/>
+                <Route path="/dish" element={<Dish/>}/>
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </HashRouter>

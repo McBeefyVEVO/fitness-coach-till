@@ -4,10 +4,28 @@ export default function Dishes() {
 
     return(
         <>
-            <p>Dishes</p>
-            <Link to="/dashboard">
-            go back
-            </Link>
+            
+            <h2>Dishes</h2>
+            <ul>
+                <li>
+                    <p>Obrazek</p>
+                    <p>Jmeno jidla</p>
+                    <p>Prejit</p>
+                </li>
+                <li>
+                    <p>Obrazek</p>
+                    <p>Jmeno jidla</p>
+                    <p>Prejit</p>
+                </li>
+                <li>
+                    <p>Obrazek</p>
+                    <p>Jmeno jidla</p>
+                    <p>Prejit</p>
+                </li>
+            </ul>
+            <Link to="/dashboard">go back to dashboard </Link>
         </>
+            
+        
     )
 }
