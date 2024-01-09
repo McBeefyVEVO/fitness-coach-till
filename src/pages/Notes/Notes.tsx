@@ -5,9 +5,10 @@ export default function Notes() {
     return(
         <>
             <p>Notes</p>
-            <Link to="/dashboard">
-            go back
-            </Link>
+            <p>Podobně jako notion, data budeme ukládat do souboru</p>
+
+
+            <Link to="/dashboard">go back to dashboard</Link>
         </>
     )
 }

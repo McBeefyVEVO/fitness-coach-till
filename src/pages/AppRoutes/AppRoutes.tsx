@@ -17,6 +17,8 @@ import Notifications from "../Notifications/Notifications";
 import Friend from "../Friends/Friend";
 import Program from "../Programs/Program";
 import Dish from "../Dishes/Dish";
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy"
+import AppReview from "../AppReview/AppReview";
 
 export function AppRoutes() {
     return (
@@ -36,6 +38,8 @@ export function AppRoutes() {
                 <Route path="/notes" element={<Notes />}/>
                 <Route path="/programs" element={<Programs />}/>
                 <Route path="/notifications" element={<Notifications/>}/>
+                <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
+                <Route path="/appreview" element={<AppReview/>}/>
 
                 <Route path="/friend" element={<Friend/>}/>
                 <Route path="/program" element={<Program/>}/>
