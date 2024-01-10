@@ -19,6 +19,7 @@ import Program from "../Programs/Program";
 import Dish from "../Dishes/Dish";
 import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy"
 import AppReview from "../AppReview/AppReview";
+import Timetabledev from "../Timetable/Timetabledev";
 
 export function AppRoutes() {
     return (
@@ -40,6 +41,7 @@ export function AppRoutes() {
                 <Route path="/notifications" element={<Notifications/>}/>
                 <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
                 <Route path="/appreview" element={<AppReview/>}/>
+                <Route path="/timetabledev" element={<Timetabledev/>}/>
 
                 <Route path="/friend" element={<Friend/>}/>
                 <Route path="/program" element={<Program/>}/>
