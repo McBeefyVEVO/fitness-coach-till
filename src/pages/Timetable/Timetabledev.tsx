@@ -7,7 +7,7 @@ export default function Timetabledev() {
             <p>I want to kill myself</p>
             
 
-            <Link to="/timetable">go back to timetable</Link>
+            <Link to="/timetabletest">go back to timetable</Link>
         </>
     )
 }
