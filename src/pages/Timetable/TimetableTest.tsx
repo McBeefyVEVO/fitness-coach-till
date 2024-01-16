@@ -21,54 +21,12 @@ import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
 import { Avatar } from "@mui/material";
 import { Link as RedirectLink } from "react-router-dom";
-
-//-------------------------------------------------------------------------
-import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
-import {
-  Scheduler,
-  WeekView,
-  Appointments,
-  AppointmentForm,
-  AppointmentTooltip,
-  ConfirmationDialog,
-} from '@devexpress/dx-react-scheduler-material-ui';
-import { CurrentTimeIndicator } from '@devexpress/dx-react-scheduler-material-ui';
-import { appointments } from './stuff';
-//-------------------------------------------------------------------------
-
-export class Demo extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: appointments,
-      currentDate: '2024-01-12',
-    };
-
-    this.commitChanges = this.commitChanges.bind(this);
-    }
-  }
-
-  commitChanges({ added, changed, deleted }) {
-    this.setState((state) => {
-      let { data } = state;
-      if (added) {
-        const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
-        data = [...data, { id: startingAddedId, ...added }];
-      }
-      if (changed) {
-        data = data.map(appointment => (
-          changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment));
-      }
-      if (deleted !== undefined) {
-        data = data.filter(appointment => appointment.id !== deleted);
-      }
-      return { data };
-    });
-  }
-
-  render() {
-    const { currentDate, data } = this.state;}
-
+import { useState } from "react";
+import WeekScheduler from "./WeekScheduler";
+//----------------------------------------------------------------------------------------------------
+const TimetableTest: React.FC = () => {
+const startDate = new Date();} // You can set the initial date as per your requirement
+//----------------------------------------------------------------------------------------------------
 
 function Copyright(props: any) {
   return (
@@ -116,7 +74,7 @@ const Drawer = styled(MuiDrawer, {
   "& .MuiDrawer-paper": {
     position: "relative",
     whiteSpace: "nowrap",
-    backgroundColor : "#F2F2F2",
+    backgroundColor: "#F2F2F2",
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
@@ -244,16 +202,15 @@ export default function Timetable() {
               Honzik Pikacu
             </Typography>
 
-          <RedirectLink to={"/profile"}> 
-            <IconButton color="inherit">
-              <Avatar
-                alt="Avatar"
-                src="/pika.png"
-                sx={{ width: 56, height: 56 }}
-              />
-            </IconButton>
-          </RedirectLink>
-
+            <RedirectLink to={"/profile"}>
+              <IconButton color="inherit">
+                <Avatar
+                  alt="Avatar"
+                  src="/pika.png"
+                  sx={{ width: 56, height: 56 }}
+                />
+              </IconButton>
+            </RedirectLink>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -277,8 +234,8 @@ export default function Timetable() {
               <Grid item xs={3} alignItems={"center"}>
                 <ListItems open={open} />
                 <Divider
-                  variant={ open ? "middle" : "fullWidth"}
-                  sx={{ my: 2, color: "#333333", backgroundColor: "#333333"}}
+                  variant={open ? "middle" : "fullWidth"}
+                  sx={{ my: 2, color: "#333333", backgroundColor: "#333333" }}
                 />
                 <SecondaryListItems open={open} />
               </Grid>
@@ -296,23 +253,10 @@ export default function Timetable() {
           }}
         >
           <Toolbar />
+          
 
 
-
-          <Paper>
-    <Scheduler 
-          data={data}
-          height={660}>
-      <ViewState currentDate={currentDate} />
-      <WeekView
-        startDayHour={0}
-        endDayHour={24}
-      />
-      <Appointments />
-      
-    </Scheduler>
-         </Paper>
-
+         <WeekScheduler /> 
 
         </Box>
       </Box>

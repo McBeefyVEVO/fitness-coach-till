@@ -1,0 +1,14 @@
+.root {
+    flex-grow: 1;
+}
+
+.appBar {
+    
+}
+
+.paper {
+    padding: 2em;
+    color: black;
+    text-align: center;
+    min-height: 100px;
+}
