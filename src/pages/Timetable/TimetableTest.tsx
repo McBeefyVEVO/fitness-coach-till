@@ -19,13 +19,13 @@ import { ListItems, SecondaryListItems, BottomListItems } from "./listItems";
 import "../../index.css";
 import LOGO from "../../assets/LOGO.svg";
 import { ThemeOptions } from "@mui/material/styles";
-import { Avatar } from "@mui/material";
+import { Avatar, FilledTextFieldProps, OutlinedTextFieldProps, StandardTextFieldProps, TextFieldVariants } from "@mui/material";
 import { Link as RedirectLink } from "react-router-dom";
 import { useState } from "react";
-import WeekScheduler from "./WeekScheduler";
+
+
 //----------------------------------------------------------------------------------------------------
-const TimetableTest: React.FC = () => {
-const startDate = new Date();} // You can set the initial date as per your requirement
+
 //----------------------------------------------------------------------------------------------------
 
 function Copyright(props: any) {
@@ -253,10 +253,7 @@ export default function Timetable() {
           }}
         >
           <Toolbar />
-          
 
-
-         <WeekScheduler /> 
 
         </Box>
       </Box>
